@@ -1,0 +1,181 @@
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHvxk.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/staatliches/v11/HI_OiY8KO6hCsQSoAPmtMbec.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  word-break: break-word;
+  font-weight: normal;
+}
+body {
+  padding: 0 15px;
+  font-family: 'Lato', sans-serif, system-ui, sans-serif;
+  color: #e5e5e5;
+  background: #343440;
+}
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6,
+p {
+  width: 100%;
+  display: block;
+}
+h2,
+h3,
+p {
+  margin-bottom: 15px;
+}
+button,
+input,
+textarea,
+select {
+  box-shadow: none;
+  outline: none;
+  border: 0;
+}
+a,
+:hover,
+:active,
+:focus,
+:target {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+}
+.row {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 30px auto;
+}
+.col50,
+.col33,
+.col100,
+.col25 {
+  margin: 15px auto;
+}
+.col50 {
+  width: calc(50% - 30px);
+}
+.col33 {
+  width: calc(33.33% - 30px);
+}
+.col25 {
+  width: calc(25% - 30px);
+}
+@media (max-width: 900px) {
+  .col33,
+  .col25 {
+    width: calc(50% - 30px);
+  }
+}
+@media (max-width: 600px) {
+  .col33,
+  .col25 {
+    width: calc(100% - 30px);
+  }
+  .col50 {
+    width: calc(100% - 30px);
+  }
+}
+.col100 {
+  width: 100%;
+}
+.flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.flex.center {
+  justify-content: center;
+}
+.flex.start {
+  justify-content: start;
+}
+.flex.column {
+  flex-direction: column;
+  align-items: unset;
+}
+.flex.nowrap {
+  flex-wrap: nowrap;
+}
+.title {
+  margin: 30px auto;
+  width: 100%;
+  font-family: 'Staatliches', cursive, system-ui, sans-serif;
+}
+.title.xl {
+  font-size: 6em;
+}
+.subtitle {
+  color: #696980;
+}
+.textCenter {
+  text-align: center;
+}
+.btn {
+  max-width: max-content;
+  margin: 0 auto;
+  padding: 15px 35px;
+  display: block;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s linear, border-color 0.3s linear;
+}
+.btn.primary {
+  background: #9D9DBF;
+}
+.btn.secondary {
+  background: #696980;
+}
+.btn:hover {
+  background: #D1D2FF;
+  color: #343440;
+}
+.btn.outline {
+  background: transparent;
+}
+.btn.outline.primary {
+  border: 2px solid #9D9DBF;
+  color: #9D9DBF;
+}
+.btn.outline.secondary {
+  border: 2px solid #696980;
+  color: #696980;
+}
+.btn.outline:hover {
+  border-color: #D1D2FF;
+  color: #D1D2FF;
+}
+.shadowLarge {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.shadowSmall {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
