@@ -1,0 +1,35 @@
+@import url('../generic/vars.less');
+
+body {
+	margin: 0;
+	padding: 0;
+	text-rendering: optimizeLegibility;
+	overflow: hidden;
+}
+
+.well {
+	position: relative;
+	overflow: hidden;
+	transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.top {
+	position: relative;
+	top: -.2em;
+}
+
+.panel {
+	height: 100vh;
+	padding: 1em;
+	overflow: hidden;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.panel {
+	background: @bg;
+}
+
+.panel:nth-child(odd) {
+	background: @secondary;
+}

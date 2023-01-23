@@ -12,19 +12,7 @@
 @fontTitles: '';
 
 //Themes
-    // stormAhead
-    @import url('https://fonts.googleapis.com/css2?family=Lato&family=Staatliches&display=swap');
-
-    @primary : #9D9DBF;
-    @secondary: #696980;
-    @highlight: #D1D2FF;
-
-    @text: #e5e5e5;
-    @bg: #343440;
-
-    @fontText: 'Lato', sans-serif;
-    @fontTitles: 'Staatliches', cursive;
-    @fontWeight: normal;
+    @import url('./themes/stormAhead.less');
 //
 
 //Structure
@@ -48,6 +36,10 @@ body {
 h1, h2, h3, h4, h4, h5, h6, p {
     width: 100%;
     display: block;
+}
+
+h1, h2, h3, h4, h4, h5, h6 {
+    font-family: @fontTitles, system-ui, sans-serif;
 }
 
 h2, h3, p {
@@ -82,6 +74,10 @@ ul, ol {
     flex-flow: row wrap;
     align-items: center;
     margin: 30px auto;
+
+    &.center {
+        justify-content: center;
+    }
 }
 
 .col50, .col33, .col100, .col25 {
@@ -150,10 +146,21 @@ ul, ol {
 .title {
     margin: 30px auto;
     width: 100%;
-    font-family: @fontTitles, system-ui, sans-serif;
 
     &.xl {
         font-size: 6em;
+    }
+
+    &.l {
+        font-size: 4.5em;
+    }
+
+    &.m {
+        font-size: 3.6em;
+    }
+
+    &.s {
+        font-size: 2.24em;
     }
 }
 
@@ -207,12 +214,73 @@ ul, ol {
     }
 }
 
+//Gradients and shadows         
+.gradientDark {
+    background-image: linear-gradient(to right, transparent 0%,  @primary  51%, transparent  100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: @bg;
+
+    &:hover {
+        color: @text;
+        background-size: 220% auto;
+        background-position: right center;
+    }
+}
+
+.gradientLight {
+    background-image: linear-gradient(to right, @bg 0%,  @primary 51%, @secondary 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: @text;
+
+    &:hover {
+        background-size: 220% auto;
+        background-position: right center;
+        color: @bg;
+    }
+}
+
 .shadowLarge {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .shadowSmall {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+//Images
+.img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.parallax {
+    background-attachment: fixed;
+}
+
+//Margins and paddings
+.m-15 {
+    margin: 15px auto;
+}
+
+.m-30 {
+    margin: 30px auto;
+}
+
+.p-15 {
+    padding: 15px;
+}
+
+.p-30 {
+    padding: 30px;
 }
 
 

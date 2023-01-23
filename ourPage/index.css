@@ -23,7 +23,7 @@
 body {
   padding: 0 15px;
   font-family: 'Lato', sans-serif, system-ui, sans-serif;
-  color: #e5e5e5;
+  color: #ffffff;
   background: #343440;
 }
 h1,
@@ -36,6 +36,15 @@ h6,
 p {
   width: 100%;
   display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6 {
+  font-family: 'Staatliches', cursive, system-ui, sans-serif;
 }
 h2,
 h3,
@@ -72,6 +81,9 @@ ol {
   flex-flow: row wrap;
   align-items: center;
   margin: 30px auto;
+}
+.row.center {
+  justify-content: center;
 }
 .col50,
 .col33,
@@ -129,10 +141,18 @@ ol {
 .title {
   margin: 30px auto;
   width: 100%;
-  font-family: 'Staatliches', cursive, system-ui, sans-serif;
 }
 .title.xl {
   font-size: 6em;
+}
+.title.l {
+  font-size: 4.5em;
+}
+.title.m {
+  font-size: 3.6em;
+}
+.title.s {
+  font-size: 2.24em;
 }
 .subtitle {
   color: #696980;
@@ -173,9 +193,84 @@ ol {
   border-color: #D1D2FF;
   color: #D1D2FF;
 }
+.gradientDark {
+  background-image: linear-gradient(to right, transparent 0%, #9D9DBF 51%, transparent 100%);
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #343440;
+}
+.gradientDark:hover {
+  color: #ffffff;
+  background-size: 220% auto;
+  background-position: right center;
+}
+.gradientLight {
+  background-image: linear-gradient(to right, #343440 0%, #9D9DBF 51%, #696980 100%);
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #ffffff;
+}
+.gradientLight:hover {
+  background-size: 220% auto;
+  background-position: right center;
+  color: #343440;
+}
 .shadowLarge {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .shadowSmall {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+.bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.parallax {
+  background-attachment: fixed;
+}
+.m-15 {
+  margin: 15px auto;
+}
+.m-30 {
+  margin: 30px auto;
+}
+.p-15 {
+  padding: 15px;
+}
+.p-30 {
+  padding: 30px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+.well {
+  position: relative;
+  overflow: hidden;
+  transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
+}
+.top {
+  position: relative;
+  top: -0.2em;
+}
+.panel {
+  height: 100vh;
+  padding: 1em;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+.panel {
+  background: #343440;
+}
+.panel:nth-child(odd) {
+  background: #696980;
 }
